@@ -1,0 +1,14 @@
+{
+  "name": "seralyth-site-remake",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone web/API remake with a dashboard and /serverdata endpoint.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
