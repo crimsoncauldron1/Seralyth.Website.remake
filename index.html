@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menu Server • Dashboard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="mark">S</span><span>Menu Server</span></div>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#admins">Admins</a>
+    <a href="#supporters">Supporters</a>
+    <a href="#json">Server Data</a>
+  </nav>
+  <a class="pill" href="/serverdata" target="_blank">/serverdata ↗</a>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">SERVER CONTROL CENTER</p>
+    <h1>Menu server dashboard</h1>
+    <p class="sub">A clean, standalone recreation of the API-facing website with live server-data inspection.</p>
+  </div>
+  <div class="status-card"><span class="dot"></span><div><b id="statusText">Checking...</b><small id="statusDetail">Loading API</small></div></div>
+</section>
+
+<section id="overview" class="grid">
+  <article class="card stat"><small>Menu version</small><strong id="menuVersion">—</strong><span id="minVersion">Minimum —</span></article>
+  <article class="card stat"><small>Console minimum</small><strong id="consoleVersion">—</strong><span>Compatible server target</span></article>
+  <article class="card stat"><small>Administrators</small><strong id="adminCount">—</strong><span>Configured admins</span></article>
+  <article class="card stat"><small>Owners</small><strong id="ownerCount">—</strong><span>Configured owners</span></article>
+</section>
+
+<section id="admins" class="section">
+  <div class="section-head"><div><p class="eyebrow">ACCESS</p><h2>Administrators</h2></div><input id="adminSearch" placeholder="Search admins…"></div>
+  <div id="adminList" class="people"></div>
+</section>
+
+<section id="supporters" class="section">
+  <div class="section-head"><div><p class="eyebrow">COMMUNITY</p><h2>Supporters</h2></div></div>
+  <div id="supporterList" class="people"></div>
+</section>
+
+<section id="json" class="section">
+  <div class="section-head"><div><p class="eyebrow">API</p><h2>Server data</h2></div><div class="actions"><button id="copyBtn">Copy JSON</button><a class="button" href="/serverdata" target="_blank">Open raw JSON</a></div></div>
+  <pre id="jsonBox">Loading…</pre>
+</section>
+</main>
+<footer>Standalone recreation • JSON source: <code>/serverdata</code></footer>
+<script src="/app.js"></script>
+</body>
+</html>
